@@ -40,6 +40,14 @@ parts:
     source: https://github.com/snapcrafters/sommelier-core.git
     source-branch: "1.0"
 
+  run:
+    source: ./snap/local
+    plugin: nil
+    override-build: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/bin $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code
+      cp run $SNAPCRAFT_PART_INSTALL/usr/bin/
+      cp Config.ocf $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code/
+
   blackbox:
     source: http://www.zinnamturm.eu/pac/BlackBox-2007-core.7z
     override-pull: |
@@ -48,6 +56,7 @@ parts:
     override-build: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
       cp -r * $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
+      rm $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code/Config.ocf
 
 environment:
   WINEDLLOVERRIDES: "mscoree,mshtml="
@@ -55,10 +64,7 @@ environment:
 apps:
   bbcb-cpc:
     extensions: [ gnome-3-28 ]
-    command: bin/sommelier run-exe /USE $SNAP_USER_COMMON
-    environment:
-      RUN_EXE: "$SNAP/usr/lib/blackbox-cpc/BlackBox.exe"
-      SOMMELIER_KEEP_CWD: 1  # Don't change the working directory so relative paths still work
+    command: usr/bin/run
     plugs:
       - home
       - cups-control

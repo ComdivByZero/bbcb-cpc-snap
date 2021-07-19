@@ -1,0 +1,19 @@
+#!/bin/sh
+
+if [ -f $SNAP_USER_DATA/workdir ]; then
+  WD=`cat $SNAP_USER_DATA/workdir`
+else
+  WD="$SNAP_REAL_HOME/blackbox-cpc"
+  mkdir -p "$WD"
+  echo "$WD" > $SNAP_USER_DATA/workdir
+  ln -s `realpath $SNAP/..`/current/usr/lib/blackbox-cpc "$WD"/blackbox-core
+
+  sommelier winetricks fonts arial
+fi
+
+if [ "$PWD" = "$SNAP_REAL_HOME" ]; then
+  cd "$WD"
+fi
+
+RUN_EXE=$SNAP/usr/lib/blackbox-cpc/BlackBox.exe SOMMELIER_KEEP_CWD=1 \
+  sommelier run-exe /USE "$WD"
