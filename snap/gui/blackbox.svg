@@ -27,7 +27,7 @@
        id="linearGradient878"
        osb:paint="solid">
       <stop
-         style="stop-color:#000000;stop-opacity:1;"
+         style="stop-color:#0000c2;stop-opacity:1;"
          offset="0"
          id="stop876" />
     </linearGradient>
@@ -229,7 +229,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="306.50731"
+     inkscape:cx="55.078734"
      inkscape:cy="113.04615"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -393,21 +393,21 @@
     <g
        aria-label="CPC"
        transform="matrix(1.0642566,0,0,1.1954945,-39.631523,-44.959798)"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.11624908px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient880);stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.11624908px;line-height:1.25;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;fill-opacity:1;stroke:url(#linearGradient880);stroke-width:4.1557013;stroke-miterlimit:4;stroke-dasharray:none"
        id="text4577">
       <path
          d="m 263.32438,283.41042 q -4.35367,2.25898 -9.07699,3.409 -4.72333,1.15003 -9.85738,1.15003 -15.32,0 -24.27378,-8.54306 -8.95378,-8.58413 -8.95378,-23.24697 0,-14.70391 8.95378,-23.24697 8.95378,-8.58413 24.27378,-8.58413 5.13405,0 9.85738,1.15003 4.72332,1.15003 9.07699,3.40901 v 12.69136 q -4.39474,-2.99828 -8.66627,-4.39474 -4.27153,-1.39646 -8.99485,-1.39646 -8.46091,0 -13.30746,5.42155 -4.84654,5.42156 -4.84654,14.95035 0,9.48772 4.84654,14.90928 4.84655,5.42155 13.30746,5.42155 4.72332,0 8.99485,-1.39646 4.27153,-1.39646 8.66627,-4.39474 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.11624908px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:url(#linearGradient881);stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.11624908px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:url(#linearGradient881);stroke-width:4.1557013;stroke-miterlimit:4;stroke-dasharray:none"
          id="path4595"
          inkscape:connector-curvature="0" />
       <path
          d="m 276.42647,225.45728 h 26.24526 q 11.70563,0 17.94863,5.21619 6.28408,5.17512 6.28408,14.78606 0,9.65201 -6.28408,14.8682 -6.243,5.17512 -17.94863,5.17512 h -10.43239 v 21.2755 h -15.81287 z m 15.81287,11.45919 v 17.12719 h 8.74842 q 4.60011,0 7.10552,-2.21791 2.50542,-2.25898 2.50542,-6.36622 0,-4.10724 -2.50542,-6.32515 -2.50541,-2.21791 -7.10552,-2.21791 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.11624908px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:url(#linearGradient883);stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.11624908px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:url(#linearGradient883);stroke-width:4.1557013;stroke-miterlimit:4;stroke-dasharray:none"
          id="path4597"
          inkscape:connector-curvature="0" />
       <path
          d="m 386.70584,283.41042 q -4.35368,2.25898 -9.077,3.409 -4.72332,1.15003 -9.85737,1.15003 -15.32,0 -24.27378,-8.54306 -8.95378,-8.58413 -8.95378,-23.24697 0,-14.70391 8.95378,-23.24697 8.95378,-8.58413 24.27378,-8.58413 5.13405,0 9.85737,1.15003 4.72332,1.15003 9.077,3.40901 v 12.69136 q -4.39475,-2.99828 -8.66628,-4.39474 -4.27152,-1.39646 -8.99485,-1.39646 -8.46091,0 -13.30745,5.42155 -4.84654,5.42156 -4.84654,14.95035 0,9.48772 4.84654,14.90928 4.84654,5.42155 13.30745,5.42155 4.72333,0 8.99485,-1.39646 4.27153,-1.39646 8.66628,-4.39474 z"
-         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.11624908px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:url(#linearGradient885);stroke-width:0.9375;stroke-miterlimit:4;stroke-dasharray:none"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:84.11624908px;font-family:'DejaVu Sans';-inkscape-font-specification:'DejaVu Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;stroke:url(#linearGradient885);stroke-width:4.1557013;stroke-miterlimit:4;stroke-dasharray:none"
          id="path4599"
          inkscape:connector-curvature="0" />
     </g>

@@ -1,7 +1,7 @@
 name: bbcb-cpc
 title: BlackBox-CPC IDE (WINE)
 base: core18
-version: 1.7.2007
+version: 1.7.2007-4
 license: BSD-2-Clause
 icon: snap/gui/blackbox.svg
 summary: Component Pascal Collection version of IDE BlackBox Component Builder
@@ -44,19 +44,32 @@ parts:
     source: ./snap/local
     plugin: nil
     override-build: |
-      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/bin $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/bin \
+               $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code \
+               $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code
       cp run $SNAPCRAFT_PART_INSTALL/usr/bin/
       cp Config.ocf $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code/
+      cp Cmds.ocf   $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code/
+      cp -r Desktop $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
 
   blackbox:
     source: http://www.zinnamturm.eu/pac/BlackBox-2007-core.7z
-    override-pull: |
-      snapcraftctl pull
     plugin: nil
     override-build: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
       cp -r * $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
       rm $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code/Config.ocf
+      rm $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code/Cmds.ocf
+      rm -r $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/*/Rsrc/ru
+
+  russian:
+    source: https://github.com/bbcb/russian.git
+    plugin: nil
+    override-build: |
+      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
+      cp -r * $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
+      cd $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
+      rm README links.sh make-deb.sh
 
 environment:
   WINEDLLOVERRIDES: "mscoree,mshtml="
