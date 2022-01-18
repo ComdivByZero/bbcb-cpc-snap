@@ -1,7 +1,7 @@
 name: bbcb-cpc
 title: BlackBox-CPC IDE (WINE)
 base: core18
-version: 1.7.2007-4
+version: 1.8.2111
 license: BSD-2-Clause
 icon: snap/gui/blackbox.svg
 summary: Component Pascal Collection version of IDE BlackBox Component Builder
@@ -25,7 +25,7 @@ description: |
   documents explaining the meaning and use of each module.
   Note: to view BlackBox documents in the terminal, recommended to use odcread.
 
-grade: devel
+grade: stable
 confinement: strict
 
 architectures:
@@ -48,12 +48,12 @@ parts:
                $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code \
                $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code
       cp run $SNAPCRAFT_PART_INSTALL/usr/bin/
-      cp Config.ocf $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code/
-      cp Cmds.ocf   $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code/
+      cp System/Code/Config.ocf $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code/
+      cp Host/Code/Cmds.ocf     $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code/
       cp -r Desktop $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
 
   blackbox:
-    source: http://www.zinnamturm.eu/pac/BlackBox-2007-core.7z
+    source: http://www.zinnamturm.eu/pac/BlackBox-2111-core.7z
     plugin: nil
     override-build: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
@@ -73,6 +73,7 @@ parts:
 
 environment:
   WINEDLLOVERRIDES: "mscoree,mshtml="
+  GTK_USE_PORTAL: '1'
 
 apps:
   bbcb-cpc:
@@ -80,6 +81,7 @@ apps:
     command: usr/bin/run
     plugs:
       - home
+      - desktop
       - cups-control
       - network
       - hardware-observe
