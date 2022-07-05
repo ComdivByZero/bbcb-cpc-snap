@@ -1,7 +1,7 @@
 name: bbcb-cpc
 title: BlackBox-CPC IDE (WINE)
 base: core18
-version: 1.8.2111
+version: 1.8.2201
 license: BSD-2-Clause
 icon: snap/gui/blackbox.svg
 summary: Component Pascal Collection version of IDE BlackBox Component Builder
@@ -53,7 +53,7 @@ parts:
       cp -r Desktop $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
 
   blackbox:
-    source: http://www.zinnamturm.eu/pac/BlackBox-2111-core.7z
+    source: http://www.zinnamturm.eu/pac/BlackBox-2201-core.7z
     plugin: nil
     override-build: |
       mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
