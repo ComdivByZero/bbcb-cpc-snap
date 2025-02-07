@@ -1,13 +1,13 @@
 name: bbcb-cpc
 title: BlackBox-CPC IDE (WINE)
 base: core18
-version: 1.8.2201
+version: 1.8.2412
 license: BSD-2-Clause
 icon: snap/gui/blackbox.svg
 summary: Component Pascal Collection version of IDE BlackBox Component Builder
 description: |
-  The WinAPI-based legacy-friendly version of BlackBox Component Builder, compatible with a lot of
-  extensions from Helmut Zinn's Component Pascal Collection.
+  The WinAPI-based legacy-friendly version of BlackBox Component Builder, compatible with a 
+  lot of extensions from Helmut Zinn's Component Pascal Collection.
   BlackBox is open-source IDE and a framework (collection of modules)
   written in the programming language Component Pascal which is a descendant of languages
   Oberon←Modula-2←Pascal developed by Niklaus Wirth.
@@ -44,20 +44,20 @@ parts:
     source: ./snap/local
     plugin: nil
     override-build: |
-      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/bin \
-               $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code \
-               $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code
+      mkdir --parents $SNAPCRAFT_PART_INSTALL/usr/bin \
+                      $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code \
+                      $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code
       cp run $SNAPCRAFT_PART_INSTALL/usr/bin/
       cp System/Code/Config.ocf $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code/
       cp Host/Code/Cmds.ocf     $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code/
       cp -r Desktop $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
 
   blackbox:
-    source: http://www.zinnamturm.eu/pac/BlackBox-2201-core.7z
+    source: http://www.zinnamturm.eu/pac/BlackBox-2412-core.7z
     plugin: nil
     override-build: |
-      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
-      cp -r * $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
+      mkdir --parents $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
+      cp -r BlackBox-*-core/* $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
       rm $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/System/Code/Config.ocf
       rm $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/Host/Code/Cmds.ocf
       rm -r $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/*/Rsrc/ru
@@ -66,10 +66,10 @@ parts:
     source: https://github.com/bbcb/russian.git
     plugin: nil
     override-build: |
-      mkdir -p $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
+      mkdir --parents $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
       cp -r * $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc/
       cd $SNAPCRAFT_PART_INSTALL/usr/lib/blackbox-cpc
-      rm README links.sh make-deb.sh
+      rm README make-deb.sh
 
 environment:
   WINEDLLOVERRIDES: "mscoree,mshtml="
